@@ -1,5 +1,5 @@
 ---
-title: "Acessando um valor no env usando bash"
+title: "Soon"
 published: "2021"
 teaser: 
     "Em breve..."
