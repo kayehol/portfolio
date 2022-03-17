@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Style = styled.div`
     #randomGif {
-        object-fit: scale-down;
+        object-fit: contain;
         object-position: 50% 50%;
         position: relative;
     }
