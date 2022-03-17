@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
   }
   main {
-    padding: 1em 24em 18em;
+    padding: 1em 24em 4em;
     height: 100%;
   }
   a {
