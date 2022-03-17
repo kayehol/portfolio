@@ -27,7 +27,7 @@ const RandomGif = () => {
             const resultsList = result.data.results;
             const randomResult = resultsList[Math.floor(Math.random() * resultsList.length)];
             const gifDescription = randomResult.content_description;
-            const gifUrl = randomResult.media[0].gif.url;
+            const gifUrl = randomResult.media[0].tinygif.url;
             setGif({
                 url: gifUrl,
                 description: gifDescription
