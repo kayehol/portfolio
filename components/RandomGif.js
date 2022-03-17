@@ -3,6 +3,8 @@ import Image from "next/image";
 import styled from "styled-components";
 import axios from "axios";
 
+import Loader from "./Loader";
+
 const Style = styled.div`
     #randomGif {
         object-fit: contain;
@@ -37,7 +39,7 @@ const RandomGif = () => {
     }, []);
     return (
         <Style>
-           {Object.keys(gif).length !== 0  && <Image id="randomGif" alt={gif.description} src={gif.url} width={500} height={500} />} 
+           { Object.keys(gif).length !== 0  ? <Image id="randomGif" alt={gif.description} src={gif.url} width={500} height={500} /> : <Loader /> } 
         </Style>
     )
 }
