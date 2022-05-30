@@ -17,7 +17,7 @@ const RandomGif = () => {
     const [gif, setGif] = useState({});
     
     useEffect(() => {
-        const wordList = ['the-matrix', 'johnny-mnemonic', 'blade-runner', 'tron-1982', 'mr-robot', 'lord-of-the-rings', 'hackers-1995'];
+        const wordList = ['the-matrix', 'johnny-mnemonic', 'blade-runner', 'tron-1982', 'mr-robot', 'lord-of-the-rings', 'hackers-1995', 'lain'];
         const randomWord = wordList[Math.floor(Math.random() * wordList.length)];
         const key = process.env.TENOR_KEY;
         const url = `https://g.tenor.com/v1/search?q=${randomWord}&key=${key}&limit=4&media_filter=minimal`
