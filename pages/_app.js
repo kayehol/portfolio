@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
   @media screen and (max-width: 480px) {
   main {
     padding: 1em 2em;
+    width: 100%;
   }
 }
 `
