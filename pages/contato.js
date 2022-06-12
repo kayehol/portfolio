@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export default function Contato() {
     const items = [
-        {icon: '\u260F', link: "https://wa.me/5582003213377", text: "(82) 99321 3377"},
         {icon: '\u2709', link: "mailto:@kayeholanda@tutanota.com", text: "kayeholanda@tutanota.com"},
         {icon: '\u2328', link: "https://github.com/kayehol/", text: "github.com/kayehol"},
     ];
