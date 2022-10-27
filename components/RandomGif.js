@@ -19,23 +19,25 @@ const RandomGif = () => {
     useEffect(() => {
         const wordList = ['the-matrix', 'johnny-mnemonic', 'blade-runner', 'tron-1982', 'mr-robot', 'lord-of-the-rings', 'hackers-1995', 'lain'];
         const randomWord = wordList[Math.floor(Math.random() * wordList.length)];
-        const key = process.env.TENOR_KEY;
+        const key = process.env.NEXT_PUBLIC_TENOR_KEY;
         const url = `https://g.tenor.com/v1/search?q=${randomWord}&key=${key}&limit=4&media_filter=minimal`
         
         async function getGif() {
-            const result = await axios.get(url);
-            const resultsList = result.data.results;
-            const randomResult = resultsList[Math.floor(Math.random() * resultsList.length)];
-            const gifDescription = randomResult.content_description;
-            const gifUrl = randomResult.media[0].tinygif.url;
-            setGif({
-                url: gifUrl,
-                description: gifDescription
-            });
+            try {
+                const result = await axios.get(url);
+                const resultsList = result.data.results;
+                const randomResult = resultsList[Math.floor(Math.random() * resultsList.length)];
+                const gifDescription = randomResult.content_description;
+                const gifUrl = randomResult.media[0].tinygif.url;
+                setGif({
+                    url: gifUrl,
+                    description: gifDescription
+                });
+            } catch(err) {
+                console.error(err);
+            }
         }
-
         getGif();
-
     }, []);
     return (
         <Style>
