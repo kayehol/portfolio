@@ -1,36 +1,42 @@
-import Link from "next/link";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    #main {
-        color: ${({ theme }) => theme.colors.primary};
-    }
-    a {
-        padding: 1em;
-    }
-`;
+import Nav from 'react-bootstrap/Nav';
+import Link from 'next/link';
 
 const Header = () => {
     return (
-        <header>
-            <Wrapper>
-                <Link href="/">
-                    <a id="main">kaye-holanda</a>
-                </Link>
-                <Link href="/projs">
-                    <a>projetos</a>
-                </Link>
-                <Link href="/blog">
-                    <a>blog</a>
-                </Link>
-                <Link href="/contato">
-                    <a>contato</a>
-                </Link>
-            </Wrapper>
-        </header>
+        <Nav 
+            direction="horizontal" 
+            gap={5}
+            className="justify-content-center py-2"
+        >
+            <Nav.Item>
+                <Nav.Link>
+                    <Link href="/" >
+                        kaye-holanda
+                    </Link>
+                </Nav.Link>
+            </Nav.Item>
+            {/* <Nav.Item>
+                <Nav.Link>
+                    <Link href="/blog">
+                        <a>blog</a>
+                    </Link>
+                </Nav.Link>
+            </Nav.Item> */}
+            <Nav.Item>
+                <Nav.Link>
+                    <Link href="/contato">
+                        contato
+                    </Link>
+                </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link>
+                    <Link href="/projs">
+                        projetos
+                    </Link>
+                </Nav.Link>
+            </Nav.Item>
+        </Nav>
     );
 };
 

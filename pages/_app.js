@@ -1,10 +1,9 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GlobalStyle = createGlobalStyle`
   html,
   body {
-    background-color: #263238;
-    color: #fff;
     padding: 0;
     margin: 0;
     font-family: monospace, sans-serif;
@@ -12,29 +11,30 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: row;
     justify-content: center;
     align-self: center;
-  }
-  footer {
-    font-size: 0.8em;
-    text-align: center;
-  }
-  main {
-    padding: 1em 24em 4em;
-    height: 100%;
+    background-color: #0f0f0f;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
   }
   a {
-    color: inherit;
+    color: #fff;
     text-decoration: underline;
+    font-style: italic;
   }
-
+  a :hover {
+    color: #a6ff00;
+  }
+  footer {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+  }
   * {
     box-sizing: border-box;
   }
-  @media screen and (max-width: 480px) {
-  main {
-    padding: 1em 2em;
-    width: 100%;
-  }
-}
 `
 
 const theme = {

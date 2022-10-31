@@ -1,4 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -14,9 +17,13 @@ export default function Projs({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+        <Container>
           {posts.map((post, index) => (
-            <Post post={post} key={index} />
+            <Row key={index} className="py-2">
+              <Post post={post} />
+            </Row>
           ))}
+        </Container>
       </Layout>
     </>
   );
